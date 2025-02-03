@@ -1,12 +1,17 @@
 const express = require('express');
 const app = express();
+const cors = require('cors');
 require('dotenv').config();
 const PORT = process.env.PORT || 4000;
 const dbConnect = require('./config/database');
 const employeeRoute = require('./routes/employee');
 
 app.use(express.json());
-
+app.use(
+    cors({
+      origin: "*", //this middleware allows all origin by dafault
+    })
+);
 app.use('/api/v1',employeeRoute);
 dbConnect();
 
