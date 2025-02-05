@@ -32,60 +32,72 @@ const EmployeeForm = () => {
   return (
     <div>
       <form onSubmit={handleSubmit(createEmployee)}>
-        <div>
+        <div className="space-y-4 sm:w-110 w-80">
           <div className="flex flex-col">
-            <label htmlFor="name">Employee Name</label>
+            <label 
+            className="font-semibold mb-2"
+            htmlFor="name">Employee Name</label>
             <input
               type="text"
               required={true}
               {...register("name")}
               placeholder="Enter Your Full Name"
-              className="border rounded-md border-gray-500"
+              className="border rounded-md border-gray-700 p-2 focus:outline-none focus:ring-2 focus:ring-indigo-600 transition-all duration-300"
             />
           </div>
           <div className="flex flex-col">
-            <label htmlFor="email">Employee Email Id</label>
+            <label 
+                        className="font-semibold mb-2"
+
+            htmlFor="email">Employee Email Id</label>
             <input
               required={true}
               {...register("email")}
               placeholder="Enter Your Email"
-              className="border rounded-md border-gray-500"
+              className="border rounded-md border-gray-700 p-2 focus:outline-none focus:ring-2 focus:ring-indigo-600 transition-all duration-300"
               type="email"
             />
           </div>
           <div className="flex flex-col">
-            <label htmlFor="title">Employee Title</label>
+            <label 
+              className="font-semibold mb-2"
+
+            htmlFor="title">Employee Title</label>
             <input
               required={true}
               {...register("title")}
               type="text"
               placeholder="Enter Your Employee Title"
-              className="border rounded-md border-gray-500"
+              className="border rounded-md border-gray-700 p-2 focus:outline-none focus:ring-2 focus:ring-indigo-600 transition-all duration-300"
             />
           </div>
           <div className="flex flex-col">
-            <label htmlFor="department">Employee Department</label>
+            <label 
+             className="font-semibold mb-2"
+            htmlFor="department">Employee Department</label>
             <input
               required={true}
               {...register("department")}
               type="text"
               placeholder="Enter Your Employee Department"
-              className="border rounded-md border-gray-500"
+              className="border rounded-md border-gray-700 p-2 focus:outline-none focus:ring-2 focus:ring-indigo-600 transition-all duration-300"
             />
           </div>
           <div className="flex flex-col">
-            <label htmlFor="role">Employee Role</label>
+            <label
+             className="font-semibold mb-2"
+             htmlFor="role">Employee Role</label>
             <input
               required={true}
               {...register("role")}
               type="text"
               placeholder="Enter Your Employee Role"
-              className="border rounded-md border-gray-500"
+              className="border rounded-md border-gray-700 p-2 focus:outline-none focus:ring-2 focus:ring-indigo-600 transition-all duration-300"
             />
           </div>
           <button
             type="submit"
-            className="flex bg-blue-800 px-4 py-2 rounded-md text-md font-semibold"
+            className="flex bg-indigo-600 hover:bg-indigo-800 transition ease-in-out duration-300 cursor-pointer px-4 py-2 rounded-md text-md font-semibold sm:w-110 w-80 items-center justify-center mb-8"
           >
             Create Employee
             <GoArrowRight className="mt-1 ml-1 text-lg" />
