@@ -28,7 +28,7 @@ const Homepage = () => {
   console.log(empData);
 
   return (
-    <div className=" text-white w-full h-[100vh]">
+    <div className=" text-white h-[100vh]">
       <div className="w-[90%] mx-auto mt-5">
         <div className="flex justify-between items-center">
           <div>
@@ -38,24 +38,24 @@ const Homepage = () => {
               or delete existing ones.
             </p>
           </div>
-          <div className="bg-blue-600 p-2 font-bold text-sm rounded-md ">
-            <button
-              onClick={() => {
-                navigate("/addemployee");
-              }}
-              className="capitalize"
-            >
-              add employee
-            </button>
-          </div>
+
+          <button
+            className="bg-blue-600  capitalize py-2 px-2.5 font-bold text-sm rounded-md cursor-pointer hover:bg-blue-700 transition duration-300 ease-in-out"
+            onClick={() => {
+              navigate("/addemployee");
+            }}
+          >
+            add employee
+          </button>
         </div>
+
         <div className="">
           <table className="w-full">
-            <thead className="border border-gray-400 p-4">
-              <tr className="flex justify-between">
-                <th>Employee</th>
-                <th>Title</th>
-                <th>Role</th>
+            <thead className="border border-gray-400 bg-gray-500">
+              <tr className="flex justify-between p-2 w-full">
+                <th className="w-full">Employee</th>
+                <th className="w-full">Title</th>
+                <th className="w-full">Role</th>
               </tr>
             </thead>
             <tbody>
