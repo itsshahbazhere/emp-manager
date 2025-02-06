@@ -15,7 +15,7 @@ const EmployeeForm = () => {
 
   const createEmployee = async (data) => {
     try {
-      const savedUserResponse = await fetch(`${apiUrl}//createEmployee`, {
+      const savedUserResponse = await fetch(`${apiUrl}/createEmployee`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -97,7 +97,7 @@ const EmployeeForm = () => {
           </div>
           <button
             type="submit"
-            className="flex bg-indigo-600 hover:bg-indigo-800 transition ease-in-out duration-300 cursor-pointer px-4 py-2 rounded-md text-md font-semibold sm:w-110 w-80 items-center justify-center mb-8"
+            className="flex select-none bg-indigo-600 shadow-[0_10px_20px_rgba(50,50,229,0.4)] hover:bg-indigo-800 transition ease-in-out duration-300 cursor-pointer px-4 py-2 rounded-md text-md font-semibold sm:w-110 w-80 items-center justify-center mb-8"
           >
             Create Employee
             <GoArrowRight className="mt-1 ml-1 text-lg" />
