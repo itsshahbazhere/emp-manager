@@ -9,7 +9,7 @@ const employeeRoute = require('./routes/employee');
 app.use(express.json());
 app.use(
     cors({
-      origin: "*", //this middleware allows all origin by dafault
+      origin: process.env.FRONTEND_URL,
     })
 );
 app.use('/api/v1',employeeRoute);
